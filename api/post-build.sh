@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+# TODO: Make sure that having curl doesn't cause vulnebirity issues
 apt-get update
 apt-get install curl
 
