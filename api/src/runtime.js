@@ -162,7 +162,7 @@ class Runtime {
     get env_vars() {
       console.log('this.env_vars', this._env_vars)
       console.log('env_file', path.join(this.pkgdir, '.env'))
-      console.log('env_content', fss.read_file_sync(env_file).toString())
+      console.log('env_content', fss.read_file_sync(path.join(this.pkgdir, '.env')).toString())
       if (!this._env_vars) {
             const env_file = path.join(this.pkgdir, '.env');
             const env_content = fss.read_file_sync(env_file).toString();
