@@ -172,6 +172,7 @@ router.use((req, res, next) => {
     next();
 });
 
+// documentation -> https://github.com/engineer-man/piston/pull/299#issue-946263857
 router.ws('/connect', async (ws, req) => {
     let job = null;
     let event_bus = new events.EventEmitter();
