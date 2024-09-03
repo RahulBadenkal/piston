@@ -5,7 +5,7 @@ apt-get update
 apt-get install curl
 
 # Define variables
-data_dir="/data/coolify/applications/dk4w8kwk0g0swoowsoks8s4s/data/piston/packages"
+data_dir="/piston/packages"
 python_3_12_env_file="$data_dir/python/3.12.0/environment"
 
 # Make sure python 3.12 is installed and configured
