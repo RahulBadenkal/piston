@@ -14,7 +14,7 @@ node_20_env_config_file="$data_dir/node/20.11.1/environment"
 rm -rf /piston/packages/*
 
 # Make sure python 3.12 is installed and configured
-if [ ! -f "$python_3_12_env_file" ]; then
+if [ ! -f "$python_3_12_env_config_file" ]; then
     # Make a POST request to the API
     curl -X POST http://localhost:2000/api/v2/packages \
          -H "Content-Type: application/json" \

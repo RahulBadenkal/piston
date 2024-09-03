@@ -154,6 +154,9 @@ class Package {
         );
 
         logger.info(`Installed ${this.language}-${this.version.raw}`);
+        console.log('--- installed python ---')
+        console.log('env_file', path.join('/piston/packages/python/3.12.0', '.env'))
+        console.log('env_content', fss.read_file_sync(path.join('data/piston/packages/python/3.12.0', '.env')).toString())
 
         return {
             language: this.language,
