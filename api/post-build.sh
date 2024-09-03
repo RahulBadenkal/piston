@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+apt-get install curl
+
 # Define variables
 data_dir="/data/coolify/applications/dk4w8kwk0g0swoowsoks8s4s/data/piston/packages"
 python_3_12_env_file="$data_dir/python/3.12.0/environment"
@@ -15,3 +17,6 @@ if [ ! -f "$python_3_12_env_file" ]; then
     # Append the line to the environment file
     echo "export PYTHONUNBUFFERED=1" >> "$python_3_12_env_file"
 fi
+
+
+rm -rf post-build.sh
