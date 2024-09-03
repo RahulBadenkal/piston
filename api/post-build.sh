@@ -9,6 +9,8 @@ data_dir="/piston/packages"
 python_3_12_env_file="$data_dir/python/3.12.0/environment"
 node_20_env_file="$data_dir/node/20.11.1/environment"
 
+rm -rf /piston/packages/*
+
 # Make sure python 3.12 is installed and configured
 if [ ! -f "$python_3_12_env_file" ]; then
     # Make a POST request to the API
@@ -18,6 +20,7 @@ if [ ! -f "$python_3_12_env_file" ]; then
 
     # Append the line to the environment file
     echo "export PYTHONUNBUFFERED=1" >> "$python_3_12_env_file"
+    cat "$python_3_12_env_file"
 fi
 
 
