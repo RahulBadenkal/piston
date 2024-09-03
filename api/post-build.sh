@@ -22,7 +22,7 @@ if [ ! -f "$python_3_12_env_file" ]; then
 
     # Append the line to the environment file
     echo "export PYTHONUNBUFFERED=1" >> "$python_3_12_env_config_file"
-    echo "export PYTHONUNBUFFERED=1" >> "$python_3_12_env_file"
+    echo "PYTHONUNBUFFERED=1" >> "$python_3_12_env_file"
     cat "$python_3_12_env_file"
 fi
 
